@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>modal test</title>
+	<link rel="stylesheet" href="modal.m.css">
+</head>
+<body>
+<button id="modal-btn"> click me, I make a modal</button>
+
+<div class="modal" id="myModal">
+  <div class="modal-wrapper">
+  	<div class="modal-header">
+  		<span class="close-btn">&times;</span>
+  	 	<span class="title"></span>
+  	</div>	
+  	<div class="modal-content">
+		<p>this is content</p>  	  
+  	</div>
+  	<div class="modal-footer">
+  		<input type="button" id="btn2">
+  		<input type="button" id="btn1">
+  	</div>
+  </div>
+</div>
+<script src="modal.js"></script>
+<script>
+  window.onload = function() {
+    
+    document.querySelector("#modal-btn").onclick = function () {
+      var myModal = document.querySelector("#myModal")
+      myModal.style.display = "block"
+      var modal = new Modal(myModal,{
+        show_btn1:true,
+        show_btn2:true,
+        title:"remove tag",
+        btn1_value: "cancel",
+        btn2_value: "confirm",
+        func1: function () {
+          console.log("func1")
+        },
+         func2:function() {
+            console.log("func2")
+        },
+      })
+    }
+  }
+</script>
+</body>
+</html>

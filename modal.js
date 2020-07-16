@@ -3,6 +3,7 @@
 		this.el = typeof el === "string" ? document.querySelector(el) : el;
 		var default_options = {
 			show_btn1: true,
+			show_btn2: true,
 			title:"this is the title",
 			btn1_value: "cancel",
 			btn2_value: "confirm",
@@ -28,7 +29,10 @@
 	Modal.prototype = {
 		init: function(){
 			if (!this.options.show_btn1){
-				this.el.querySelector("#cancel").style.display="none"
+				this.el.querySelector("#btn1").style.display="none"
+			}
+			if (!this.options.show_btn2){
+				this.el.querySelector("#btn2").style.display="none"
 			}
 			this.el.querySelector("#btn1").setAttribute("value",this.options.btn1_value)
 			this.el.querySelector("#btn2").setAttribute("value",this.options.btn2_value)

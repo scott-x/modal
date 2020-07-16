@@ -1,4 +1,4 @@
-.modal {
+.sc_modal {
   display: none;
   position: fixed; 
   padding-top: 50px;
@@ -9,7 +9,7 @@
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.5);
 }
-.modal-wrapper {
+.modal_wrapper {
   position: fixed; 
   right: 0;
   width: 600px;
@@ -25,24 +25,24 @@
   animation-name: animateright;
   animation-duration: 0.6s
 }
-.modal-header {
+.modal_header {
   padding:0 20px;
   width: 100%;
   height: 54px;
   border-bottom: 1px solid #ccc;
 }
-.modal-header span {
+.modal_header span {
   display: inline-block;
   height: 54px;
   font-size: 18px;
   line-height: 54px;
 }
-.modal-header .title {
+.modal_header .title {
   float: left;
   font-family: "Arial",sans-serif;
 }
 
-.modal-header .close-btn {
+.modal_header .close_btn {
   float: right; 
   margin-right: 40px;
   color: lightgray; 
@@ -50,16 +50,16 @@
   font-weight: bold;
 }
 
-.modal-header .close-btn:hover{
+.modal_header .close_btn:hover{
   color: #666;
   cursor: pointer;
 }
-.modal-content {
+.modal_content {
   padding: 0 20px;
   margin: auto; 
   width: 100%;  
 }
-.modal-footer{
+.modal_footer{
   padding: 0 20px;
   border-top: 1px solid #ccc;
   position: fixed;
@@ -74,31 +74,31 @@
   animation-name: animateright;
   animation-duration: 0.6s
 }
-.modal-footer input[type='button'] {
+.modal_footer input[type='button'] {
   margin-right: 15px;
   height: 30px;
   border-radius: 4px;
   margin-top: 11px;
   outline: none;
 }
-.modal-footer input[type='button']:hover{
+.modal_footer input[type='button']:hover{
   cursor: pointer;
 }
-.modal-footer #btn1 {
+.modal_footer #btn1 {
   background: #fff;
   color: #333;
   border: 1px solid #ccc;
 }
-.modal-footer #btn1:hover {
+.modal_footer #btn1:hover {
   background: #ccc;
 }
 
-.modal-footer #btn2 {
+.modal_footer #btn2 {
   background: #337AB7;
   border: 1px solid #337AB7;
   color: #fff;
 }
-.modal-footer #btn2:hover {
+.modal_footer #btn2:hover {
   background: #286090;
 }
 

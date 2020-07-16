@@ -2,6 +2,7 @@
 	var Modal = function(el,options) {
 		this.el = typeof el === "string" ? document.querySelector(el) : el;
 		var default_options = {
+			width:"600px",
 			show_btn1: true,
 			show_btn2: true,
 			title:"this is the title",
@@ -34,9 +35,10 @@
 			if (!this.options.show_btn2){
 				this.el.querySelector("#btn2").style.display="none"
 			}
+			this.el.querySelector(".modal_wrapper").style.width = this.options.width
 			this.el.querySelector("#btn1").setAttribute("value",this.options.btn1_value)
 			this.el.querySelector("#btn2").setAttribute("value",this.options.btn2_value)
-			this.el.querySelector(".modal-header").querySelector(".title").innerHTML=this.options.title
+			this.el.querySelector(".modal_header").querySelector(".title").innerHTML=this.options.title
 		},
 		go: function() {
 			this.closeBtnClick()
@@ -64,7 +66,7 @@
 			}
 		},
 		closeBtnClick: function() {
-			let closeBtn = this.el.querySelector(".close-btn")
+			let closeBtn = this.el.querySelector(".close_btn")
 			var that = this
 			closeBtn.onclick = function () {
 				 that.el.style.display = "none"
